@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0"/>
+        <title>StudyTick</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" 
+        rel="stylesheet"/>
+        <link rel="stylesheet" href="../style/pomodoro.css" />
+        
+    </head>
+    <body>
+        <div class="backHome"><a style="text-decoration: none; ;color: rgb(75, 68, 68);" href="../index.html">Home</a></div>
+        <div id="container">
+            <div class="section-container">
+                <button id="Pomodoro" class="btn btn-timer btn-pomodoro">Pomodoro</button>
+                <button id="shortbreak" class="btn btn-shortbreak">Short Break</button>
+            <button id="longbreak" class="btn btn-longbreak">Long Break</button>
+            </div>
+            <div class="time-btn-container">
+                <span id="time"></span>
+                <div class="btn-container">
+                    <button id="btn-start" class="show">start</button>
+                    <button id="btn-pause" class="hide">pause</button>
+                    <button id="btn-reset" class="hide">
+                        <i class="fa-solid fa-stop"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <script src="../js/pomodoro.js"></script>
+    </body>
+</html>
