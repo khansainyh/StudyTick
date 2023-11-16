@@ -27,14 +27,18 @@ const pauseTimer = () => {
 
 // reset timer
 reset.addEventListener(
-    "click", 
-    (resetTime = () => {
-        pauseTimer();
-        count = 59;
+    "click", () => {
+    pauseTimer();
+    if (PomodoroButton.classList.contains("btn-pomodoro")){
         minCount = 24;
-        time.textContent = `${minCount + 1}:00`;
-    })
-);
+    } else if (shortBreakButton.classList.contains("btn-pomodoro")){
+        minCount = 4;
+    } else if (longBreakButton.classList.contains("btn-pomdoro")){
+        minCount = 14;
+    }
+    count = 59;
+    time.textContent = `${appendZero(minCount + 1)}:00`
+    });
 
 // *isi sendiri*
 const removePomodoro = () => {
