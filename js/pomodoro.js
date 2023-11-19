@@ -20,7 +20,12 @@ const appendZero = (value) => {
     return value;
 };
 
-// *isi sendiri*
+//alarm
+const playAlarm = () => {
+    const alarm = document.getElementById('alarm');
+};
+
+// pause timer function
 const pauseTimer = () => {
     clearInterval(set);
 };
@@ -29,6 +34,7 @@ const pauseTimer = () => {
 reset.addEventListener(
     "click", () => {
     pauseTimer();
+
     if (PomodoroButton.classList.contains("btn-pomodoro")){
         minCount = 24;
     } else if (shortBreakButton.classList.contains("btn-pomodoro")){
@@ -37,10 +43,10 @@ reset.addEventListener(
         minCount = 14;
     }
     count = 59;
-    time.textContent = `${appendZero(minCount + 1)}:00`
+    time.textContent = `${appendZero(minCount + 1)}:00`;
     });
 
-// *isi sendiri*
+// remove pomodoro class
 const removePomodoro = () => {
     buttons.forEach((btn) => {
         btn.classList.remove("btn-pomodoro");
@@ -104,7 +110,7 @@ pause.addEventListener(
     })
     );
 
-    // start timer
+// start timer
     startBtn.addEventListener("click", () => {
         reset.classList.add("show");
         pause.classList.add("show");
@@ -123,6 +129,7 @@ pause.addEventListener(
                     }
                     else{
                         clearInterval(set);
+                        playAlarm();
                     }
                 }
             }, 1000);
